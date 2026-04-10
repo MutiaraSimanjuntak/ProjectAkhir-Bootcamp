@@ -1,0 +1,23 @@
+{
+  "name": "projectakhir-bootcamp",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/MutiaraSimanjuntak/ProjectAkhir-Bootcamp#readme",
+  "bugs": {
+    "url": "https://github.com/MutiaraSimanjuntak/ProjectAkhir-Bootcamp/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MutiaraSimanjuntak/ProjectAkhir-Bootcamp.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "cypress": "^15.13.1"
+  }
+}
