@@ -16,41 +16,49 @@ Automation dibuat untuk fitur utama berikut:
 ---
 
 ## 🧪 Test Case List
-🔐 Login Test (TC01–TC12)
-TC01 - Login dengan credential valid
-TC02 - Login dengan password salah
-TC03 - Login dengan username salah
-TC04 - Login tanpa username dan password
-TC05 - Login hanya mengisi username
-TC06 - Login hanya mengisi password
-TC07 - Login dengan username spasi
-TC08 - Klik forgot password dari halaman login
-TC09 - Login dengan username huruf kecil
-TC10 - Login dengan password huruf besar
-TC11 - Login dengan username panjang
-TC12 - Login dengan tombol enter
 
-🔁 Forgot Password Test (TC13–TC20)
-TC13 - Reset password dengan username valid
-TC14 - Reset password tanpa username
-TC15 - Reset password username tidak terdaftar
-TC16 - Reset password username spasi
-TC17 - Klik cancel forgot password
-TC18 - Refresh halaman forgot password
-TC19 - Reset password username huruf kecil
-TC20 - Reset password username panjang
+### 🔐 Login Test (TC01–TC12)
 
-📂 Directory Test (TC21–TC30)
-TC21 - Membuka menu directory
-TC22 - Search employee valid
-TC23 - Search employee tanpa input
-TC24 - Reset search directory
-TC25 - Search employee partial name
-TC26 - Reload halaman directory
-TC27 - Search employee huruf kecil
-TC28 - Search employee dengan angka
-TC29 - Search employee dengan spasi
-TC30 - Buka directory lalu refresh
+* TC01 - Login dengan credential valid
+* TC02 - Login dengan password salah
+* TC03 - Login dengan username salah
+* TC04 - Login tanpa username dan password
+* TC05 - Login hanya mengisi username
+* TC06 - Login hanya mengisi password
+* TC07 - Login dengan username spasi
+* TC08 - Klik forgot password dari halaman login
+* TC09 - Login dengan username huruf kecil
+* TC10 - Login dengan password huruf besar
+* TC11 - Login dengan username panjang
+* TC12 - Login dengan tombol enter
+
+---
+
+### 🔁 Forgot Password Test (TC13–TC20)
+
+* TC13 - Reset password dengan username valid
+* TC14 - Reset password tanpa username
+* TC15 - Reset password username tidak terdaftar
+* TC16 - Reset password username spasi
+* TC17 - Klik cancel forgot password
+* TC18 - Refresh halaman forgot password
+* TC19 - Reset password username huruf kecil
+* TC20 - Reset password username panjang
+
+---
+
+### 📂 Directory Test (TC21–TC30)
+
+* TC21 - Membuka menu directory
+* TC22 - Search employee valid
+* TC23 - Search employee tanpa input
+* TC24 - Reset search directory
+* TC25 - Search employee partial name
+* TC26 - Reload halaman directory
+* TC27 - Search employee huruf kecil
+* TC28 - Search employee dengan angka
+* TC29 - Search employee dengan spasi
+* TC30 - Buka directory lalu refresh
 
 ---
 
