@@ -32,8 +32,6 @@ Automation dibuat untuk fitur utama berikut:
 * TC11 - Login dengan username panjang
 * TC12 - Login dengan tombol enter
 
----
-
 ### 🔁 Forgot Password Test (TC13–TC20)
 
 * TC13 - Reset password dengan username valid
@@ -44,8 +42,6 @@ Automation dibuat untuk fitur utama berikut:
 * TC18 - Refresh halaman forgot password
 * TC19 - Reset password username huruf kecil
 * TC20 - Reset password username panjang
-
----
 
 ### 📂 Directory Test (TC21–TC30)
 
