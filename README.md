@@ -13,7 +13,9 @@ Automation dibuat untuk fitur utama berikut:
 * Forgot Password
 * Directory (Dashboard)
 
-🧪 Test Case List
+---
+
+## 🧪 Test Case List
 🔐 Login Test (TC01–TC12)
 TC01 - Login dengan credential valid
 TC02 - Login dengan password salah
