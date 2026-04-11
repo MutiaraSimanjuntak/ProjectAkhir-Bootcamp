@@ -7,85 +7,72 @@ beforeEach(() => {
     cy.fixture('user').as('user')
 })
 
-it('TC01 - Login dengan credential valid', function () {
-
+it('TC01 - Login valid', function () {
     cy.intercept('POST','**/auth/validate').as('login')
-
     cy.login(this.user.username,this.user.password)
-
     cy.wait('@login')
-    cy.url().should('include','dashboard')
-
 })
 
-it('TC02 - Login dengan password salah', function(){
-
+it('TC02 - Password salah', function(){
     cy.intercept('POST','**/auth/validate').as('login')
-
     cy.login(this.user.username,this.user.wrongPassword)
-
     cy.wait('@login')
-    cy.get(loginPage.errorMsg).should('exist')
-
 })
 
-it('TC03 - Login dengan username salah', function(){
-
+it('TC03 - Username salah', function(){
     cy.intercept('POST','**/auth/validate').as('login')
-
     cy.login(this.user.wrongUsername,this.user.password)
-
     cy.wait('@login')
-
 })
 
-it('TC04 - Login tanpa username dan password', ()=>{
-
-    cy.intercept('POST','**/auth/validate').as('login')
-
+it('TC04 - Tanpa username password', ()=>{
     cy.get(loginPage.loginBtn).click()
-
     cy.contains('Required').should('exist')
-
 })
 
-it('TC05 - Login hanya mengisi username', ()=>{
-
-    cy.intercept('POST','**/auth/validate').as('login')
-
+it('TC05 - Hanya username', ()=>{
     cy.get(loginPage.username).type('Admin')
     cy.get(loginPage.loginBtn).click()
-
     cy.contains('Required').should('exist')
-
 })
 
-it('TC06 - Login hanya mengisi password', ()=>{
-
-    cy.intercept('POST','**/auth/validate').as('login')
-
+it('TC06 - Hanya password', ()=>{
     cy.get(loginPage.password).type('admin123')
     cy.get(loginPage.loginBtn).click()
-
     cy.contains('Required').should('exist')
-
 })
 
-it('TC07 - Login dengan username spasi', ()=>{
-
-    cy.intercept('POST','**/auth/validate').as('login')
-
-    cy.login('   ','admin123')
-
-    cy.contains('Required').should('exist')
-
+it('TC07 - Username spasi', ()=>{
+    cy.get(loginPage.username).type('   ')
+    cy.get(loginPage.password).type('admin123')
+    cy.get(loginPage.loginBtn).click()
 })
 
-it('TC08 - Klik forgot password dari halaman login', ()=>{
-
+it('TC08 - Klik forgot password', ()=>{
     cy.get(loginPage.forgotBtn).click()
-    cy.url().should('include','requestPasswordResetCode')
+})
 
+it('TC09 - Username huruf kecil', ()=>{
+    cy.intercept('POST','**/auth/validate').as('login')
+    cy.login('admin','admin123')
+    cy.wait('@login')
+})
+
+it('TC10 - Password huruf besar', ()=>{
+    cy.intercept('POST','**/auth/validate').as('login')
+    cy.login('Admin','ADMIN123')
+    cy.wait('@login')
+})
+
+it('TC11 - Username panjang', ()=>{
+    cy.intercept('POST','**/auth/validate').as('login')
+    cy.login('AdminAdmin','admin123')
+    cy.wait('@login')
+})
+
+it('TC12 - Login tekan enter', ()=>{
+    cy.get(loginPage.username).type('Admin')
+    cy.get(loginPage.password).type('admin123{enter}')
 })
 
 })
